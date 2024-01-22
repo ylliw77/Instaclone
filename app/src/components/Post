@@ -1,0 +1,39 @@
+import { Ionicons, AntDesign } from "@expo/vector-icons";
+
+const Post = () => {
+  return (
+    <>
+      <View style={styles.post}>
+        <View style={styles.postHeader}>
+          <Image source={item.imgUrl} style={styles.userAvatar} />
+          <Text>{item.content}</Text>
+          <Ionicons name="ellipsis-vertical" size={24} color="black" />
+        </View>
+        <Image source={{ uri: item.imgUrl }} style={styles.postImage} />
+        <View style={styles.postFooter}>
+          <View style={styles.interactionIcons}>
+            <Ionicons
+              name="heart-outline"
+              size={24}
+              color="black"
+              style={styles.iconSpacing}
+            />
+            <Ionicons
+              name="chatbubble-outline"
+              size={24}
+              color="black"
+              style={styles.iconSpacing}
+            />
+            <Ionicons name="paper-plane-outline" size={24} color="black" />
+          </View>
+          {/* <Text>Liked by craig_love and {item.likes} others</Text>
+        <Text>
+          {item.user} | {item.caption}
+        </Text> */}
+        </View>
+      </View>
+    </>
+  );
+};
+
+export default Post
